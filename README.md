@@ -1,6 +1,6 @@
 # Geo Weather Widget
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://poser.pugx.org/litalino/geo-weather-widget/v)](https://packagist.org/packages/litalino/geo-weather-widget) [![Total Downloads](https://poser.pugx.org/litalino/geo-weather-widget/downloads)](https://packagist.org/packages/litalino/geo-weather-widget)
+![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://poser.pugx.org/litalino/flarum-geo-weather-widget/v)](https://packagist.org/packages/litalino/flarum-geo-weather-widget) [![Total Downloads](https://poser.pugx.org/litalino/flarum-geo-weather-widget/downloads)](https://packagist.org/packages/litalino/flarum-geo-weather-widget)
 
 # Want to know what's the weather out there? Don't you want to go out to check? Here is the solution!
 
@@ -9,7 +9,7 @@ A [Flarum](http://flarum.org) extension. Add a weather widget to Flarum "PLugin 
 
 PLugin Developer: justoverclockl/geo-weather
 
-PLugin Clone Co-development: Litalino/flarum-geo-weather
+PLugin Clone Co-development: Litalino/flarum-geo-weather-widget
 
 
 ![hVrepGH01K](https://user-images.githubusercontent.com/79002016/127768086-a72a2a12-2b72-47a5-8317-acf63e6a851f.gif)
@@ -24,13 +24,13 @@ Register your free api key on http://api.openweathermap.org/ and paste the gener
 Install with composer:
 
 ```sh
-composer require litalino/geo-weather-widget:"*"
+composer require litalino/flarum-geo-weather-widget:"*"
 ```
 
 ### Updating
 
 ```sh
-composer update litalino/geo-weather-widget:"*"
+composer update litalino/flarum-geo-weather-widget:"*"
 php flarum cache:clear
 ```
 ## Update content
@@ -39,5 +39,5 @@ php flarum cache:clear
 
 ### Links
 
-- [Packagist](https://packagist.org/packages/litalino/geo-weather-widget)
-- [GitHub](https://github.com/litalino/geo-weather-widget)
+- [Packagist](https://packagist.org/packages/litalino/flarum-geo-weather-widget)
+- [GitHub](https://github.com/litalino/flarum-geo-weather-widget)
