@@ -19,6 +19,7 @@ import IndexPage from "flarum/forum/components/IndexPage";
 import GeoWeather from "./GeoWeather";
 import Page from "flarum/common/components/Page";
 import extractText from "flarum/common/utils/extractText";
+import ItemList from "flarum/common/utils/ItemList";
 
 export default class geoWeatherWidget extends Widget {
   className() {
@@ -33,9 +34,7 @@ export default class geoWeatherWidget extends Widget {
 
   title() {
     // Widget title.
-    return extractText(
-      app.translator.trans("geo-weather.forum.widget.title")
-    );
+    return extractText(app.translator.trans("geo-weather.forum.widget.title"));
   }
 
   content() {
@@ -66,59 +65,120 @@ export default class geoWeatherWidget extends Widget {
     extend(IndexPage.prototype, "onremove", function () {
       clearInterval(this.timeInterval);
     });
-    extend(IndexPage.prototype, "oncreate", (items) => {
-      const bgimage =
-        app.forum.attribute("baseUrl") +
-        "/assets/extensions/justoverclock-geo-weather/4seasons.gif";
-      items.add(
-        "GeoWeatherWg",
+
+    /*const bgimage =
+      app.forum.attribute("baseUrl") +
+      "/assets/extensions/litalino-geo-weather-widget/4seasons.gif";
+    return
+    m(
+      "div",
+      {
+        className: "weather",
+        style: "background-image: url(" + bgimage + ")",
+      },
+      [
         m(
           "div",
-          {
-            className: "weather",
-            style: "background-image: url(" + bgimage + ")",
-          },
-          [
-            m(
-              "div",
-              { id: "temp-main" },
-              app.translator.trans("geo-weather.forum.temp")
-            ),
-            m("div", { id: "time" }),
+          { id: "temp-main" },
+          app.translator.trans("geo-weather.forum.temp")
+        ),
+        m("div", { id: "time" }),
 
+        m(
+          "div",
+          { id: "condition" },
+          app.translator.trans("geo-weather.forum.unknown")
+        ),
+        m(
+          "ul",
+          { className: "col-w-c" },
+          m(
+            "li",
+            { id: "wind" },
+            app.translator.trans("geo-weather.forum.wind")
+          ),
+          m(
+            "li",
+            { id: "clouds" },
+            app.translator.trans("geo-weather.forum.clouds")
+          ),
+          //m(
+          //    "li",
+          //    { id: "rain" },
+          //    app.translator.trans("geo-weather.forum.rain")
+          //  )
+          m(
+            "li",
+            { id: "humidity" },
+            app.translator.trans("geo-weather.forum.humidity")
+          )
+        ),
+      ]
+    );*/
+    const items = this.items().toArray();
+
+    if (items.length === 0) return;
+
+    return <div class="item-GeoWeatherWg">{items}</div>;
+  }
+
+  items() {
+    const items = new ItemList();
+
+    const bgimage =
+      app.forum.attribute("baseUrl") +
+      "/assets/extensions/litalino-geo-weather-widget/4seasons.gif";
+    items.add(
+      "GeoWeatherWg",
+      m(
+        "div",
+        {
+          className: "weather",
+          style: "background-image: url(" + bgimage + ")",
+        },
+        [
+          m(
+            "div",
+            { id: "temp-main" },
+            app.translator.trans("geo-weather.forum.temp")
+          ),
+          m("div", { id: "time" }),
+
+          m(
+            "div",
+            { id: "condition" },
+            app.translator.trans("geo-weather.forum.unknown")
+          ),
+          m(
+            "ul",
+            { className: "col-w-c" },
             m(
-              "div",
-              { id: "condition" },
-              app.translator.trans("geo-weather.forum.unknown")
+              "li",
+              { id: "wind" },
+              app.translator.trans("geo-weather.forum.wind")
             ),
             m(
-              "ul",
-              { className: "col-w-c" },
-              m(
-                "li",
-                { id: "wind" },
-                app.translator.trans("geo-weather.forum.wind")
-              ),
-              m(
-                "li",
-                { id: "clouds" },
-                app.translator.trans("geo-weather.forum.clouds")
-              ),
-              /*m(
+              "li",
+              { id: "clouds" },
+              app.translator.trans("geo-weather.forum.clouds")
+            ),
+            /*m(
                   "li",
                   { id: "rain" },
                   app.translator.trans("geo-weather.forum.rain")
                 ),*/
-              m(
-                "li",
-                { id: "humidity" },
-                app.translator.trans("geo-weather.forum.humidity")
-              )
-            ),
-          ]
-        ),
-        10
-      );
-    });
+            m(
+              "li",
+              { id: "humidity" },
+              app.translator.trans("geo-weather.forum.humidity")
+            )
+          ),
+        ]
+      ),
+      10
+    );
+
+    return items;
   }
+  
 }

@@ -79,7 +79,8 @@ export default function () {
       let wind = res.wind.speed;
       let clouds = res.clouds.all;
       let rain = ''; //res.rain.`1h`;
-      
+      let humidity = res.main.humidity;
+
       $("#temp-main").html(`${temp}°`);
       //$("#condition").html(condition);
       $("#condition").html(function () {
@@ -111,6 +112,16 @@ export default function () {
           ": " +
           rain +
           " </em>";
+        return "  " + txt + " ";
+      });
+
+      $("#humidity").html(function () {
+        var txt =
+          "<em>" +
+          app.translator.trans("geo-weather.forum.humidity") +
+          ": " +
+          humidity +
+          " % </em>";
         return "  " + txt + " ";
       });
 
