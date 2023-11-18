@@ -14,6 +14,8 @@ PLugin Clone Co-development: Litalino/flarum-geo-weather-widget
 
 ![hVrepGH01K](https://user-images.githubusercontent.com/79002016/127768086-a72a2a12-2b72-47a5-8317-acf63e6a851f.gif)
 
+![geo-weather](https://github.com/Litalino/flarum-geo-weather-widget/assets/99712477/d77aa4c0-dfbf-4106-ac5d-94c0dbeeaab6)
+
 
 ### Usage
 
@@ -41,3 +43,4 @@ php flarum cache:clear
 
 - [Packagist](https://packagist.org/packages/litalino/flarum-geo-weather-widget)
 - [GitHub](https://github.com/litalino/flarum-geo-weather-widget)
+- [Discuss](https://discuss.flarum.org/d/33649-geo-weather-widget)
