@@ -29,7 +29,7 @@ export default class geoWeatherWidget extends Widget {
 
   icon() {
     // Widget icon.
-    return "fas fa-chart-pie";
+    return "fas fa-cloud-sun";
   }
 
   title() {
@@ -38,7 +38,34 @@ export default class geoWeatherWidget extends Widget {
   }
 
   content() {
-    
+    extend(Page.prototype, ["oncreate", "onupdate"], GeoWeather);
+    /*extend(IndexPage.prototype, "oncreate", function () {
+      function settingClock() {
+        var today = new Date();
+        var hour = today.getHours();
+        var minute = today.getMinutes();
+        var second = today.getSeconds();
+
+        if (hour < 10) {
+          hour = "0" + hour;
+        }
+        if (minute < 10) {
+          minute = "0" + minute;
+        }
+        if (second < 10) {
+          second = "0" + second;
+        }
+
+        var frame = document.getElementById("time-geo-weather");
+        frame.innerHTML = hour + ":" + minute + ":" + second;
+      }
+
+      this.timeInterval = setInterval(settingClock, 500);
+    });
+    extend(IndexPage.prototype, "onremove", function () {
+      clearInterval(this.timeInterval);
+    });*/
+
     /*const bgimage =
       app.forum.attribute("baseUrl") +
       "/assets/extensions/litalino-geo-weather-widget/4seasons.gif";
@@ -155,31 +182,3 @@ export default class geoWeatherWidget extends Widget {
   }
   
 }
-
-extend(Page.prototype, ["oncreate", "onupdate"], GeoWeather);
-extend(IndexPage.prototype, "oncreate", function () {
-  function settingClock() {
-    var today = new Date();
-    var hour = today.getHours();
-    var minute = today.getMinutes();
-    var second = today.getSeconds();
-
-    if (hour < 10) {
-      hour = "0" + hour;
-    }
-    if (minute < 10) {
-      minute = "0" + minute;
-    }
-    if (second < 10) {
-      second = "0" + second;
-    }
-
-    var frame = document.getElementById("time-geo-weather");
-    frame.innerHTML = hour + ":" + minute + ":" + second;
-  }
-
-  this.timeInterval = setInterval(settingClock, 500);
-});
-extend(IndexPage.prototype, "onremove", function () {
-  clearInterval(this.timeInterval);
-});

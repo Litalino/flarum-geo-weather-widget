@@ -35,7 +35,7 @@ php flarum cache:clear
 ## Update content
 
 ### 1.1.0
-* Update time
+* Fix Icon
 ### 1.0.0
 * Fix condition wind humidity
 
