@@ -8,12 +8,9 @@ A [Flarum](http://flarum.org) extension. Add a weather widget to Flarum "PLugin 
 
 
 PLugin Developer: justoverclockl/geo-weather
-
-PLugin Clone Co-development: Litalino/flarum-geo-weather-widget
-
-
 ![hVrepGH01K](https://user-images.githubusercontent.com/79002016/127768086-a72a2a12-2b72-47a5-8317-acf63e6a851f.gif)
 
+PLugin Clone Co-development: Litalino/flarum-geo-weather-widget
 ![geo-weather](https://github.com/Litalino/flarum-geo-weather-widget/assets/99712477/d77aa4c0-dfbf-4106-ac5d-94c0dbeeaab6)
 
 
@@ -36,6 +33,9 @@ composer update litalino/flarum-geo-weather-widget:"*"
 php flarum cache:clear
 ```
 ## Update content
+
+### 1.1.0
+* Update time
 ### 1.0.0
 * Fix condition wind humidity
 
