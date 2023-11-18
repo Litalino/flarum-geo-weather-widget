@@ -1,0 +1,53 @@
+{
+  "name": "litalino/flarum-geo-weather-widget",
+  "description": "Add a weather widget to Flarum",
+  "keywords": [
+    "Geo Weather",
+    "wheater",
+    "wheater widget"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^1.0",,
+    "afrux/forum-widgets-core": "^0.1.7"
+  },
+  "require-dev": {
+    "flarum/testing": "^1.0"
+  },
+  "authors": [
+    {
+      "name": "Litalino",
+      "email": "info@khatvongsong.vn",
+      "role": "Co-development"
+    },
+	{
+      "name": "Marco Colia",
+      "email": "info@flarum.it",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "source": "https://github.com/litalino/flarum-geo-weather"
+  },
+  "autoload": {
+    "psr-4": {
+      "Litalino\\GeoWeatherWidget\\": "src/"
+    }
+  },
+  "homepage": "https://khatvongsong.vn",
+  "extra": {
+    "flarum-extension": {
+      "title": "Geo Weather Widget",
+      "category": "",
+      "icon": {
+        "name": "fas fa-cloud-sun",
+        "backgroundColor": "yellow",
+        "color": "white"
+      }
+    },
+    "flagrow": {
+      "discuss": ""
+    }
+  }
+}

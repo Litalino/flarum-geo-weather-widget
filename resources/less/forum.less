@@ -1,0 +1,114 @@
+.item-GeoWeatherWg {
+
+  .weather{
+    background-position: right 98% bottom 2%;
+    background-size: 300px 180px;
+    color:#fff;
+    width:190px;
+    height: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+    padding: 50px 50px 100px 50px;
+    margin-bottom: 20px;
+
+    & #temp-main{
+      font-size: 43px;
+      margin-top: -47px;
+      margin-left: -40px;
+      color: @primary-color;
+    }
+    & #time {
+      margin-top: -26px;
+      margin-bottom: 16px;
+    
+      font-weight: 300;
+      letter-spacing: 1px;
+      float: left;
+      margin: 0;
+      margin-top: -16px;
+      margin-left: -40px;
+      width: 170px;
+      font-size: 13px;
+      color: @primary-color;
+      line-height: 1.0;
+    }
+    & #condition {
+        color: var(--text-color);
+        float: left;
+        margin: 0;
+        margin-top: -5px;
+        margin-left: -50px;
+        width: 190px;
+        font-size: 13px;
+        line-height: 1.0;
+    }
+    & p {
+        top: -10px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        position: relative;
+    }
+    & #wind{
+      font-weight: 300;
+      /* letter-spacing: 2px;
+      margin-top: -16px;
+      width: 190px;
+      font-size: 13px;
+      float: left;
+      margin-left: -40px;
+      padding-right: 10px;*/
+      color: @primary-color;
+    }
+    & #clouds{
+      font-weight: 300;
+        /* letter-spacing: 2px;
+        margin-top: -16px;
+        width: 190px;
+        font-size: 13px;
+        float: left;
+        margin-left: 0px;*/
+        color: @primary-color;
+    }
+    & #rain{
+      font-weight: 300;
+        /* letter-spacing: 2px;
+        margin-top: -16px;
+        width: 190px;
+        font-size: 13px;
+        float: left;
+        margin-left: 0px;*/
+        color: @primary-color;
+    }
+    & #humidity{
+      font-weight: 300;
+        /* letter-spacing: 2px;
+        margin-top: -16px;
+        width: 190px;
+        font-size: 13px;
+        float: left;
+        margin-left: 0px;*/
+        color: @primary-color;
+    }
+  }
+
+  & .col-w-c {
+      columns: 3;
+      -webkit-columns: 3;
+      -moz-columns: 3;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      margin-left: -40px;
+      width: 170px;
+  }
+
+}
+@media only screen and (max-width: 992px) {
+  .item-GeoWeatherWg {
+    .weather{
+      display: none;
+    }
+  }
+ 
+}
